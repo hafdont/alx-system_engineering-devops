@@ -1,0 +1,3 @@
+#!/bin/bash 
+ls -al    cd ..ls  -al i  cd  /boot  ls  -al
+

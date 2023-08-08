@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Watch the directory for new files
+inotifywait -m /alx-system_engineering-devops/0x02-shell_redirections -e create -e moved_to |
+while read path action file; do
+    # Check if the file is regular
+    if [ -f "$path$file" ]; then
+        chmod +x "$path$file"
+        echo "Changed permissions for $file"
+    fi
+done
+

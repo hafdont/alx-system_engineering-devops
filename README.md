@@ -1,2 +1,1 @@
-#!/bin/bash 
-This a ALX class repo
+A read me file for the shell prjects

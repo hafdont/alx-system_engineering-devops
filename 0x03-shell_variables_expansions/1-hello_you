@@ -1,0 +1,1 @@
+#!/bin/bash\necho "echo Hello $(whoami)" 

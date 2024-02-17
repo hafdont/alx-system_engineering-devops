@@ -7,7 +7,7 @@ input_string = ARGV[0]
 regex_pattern = /School/
 
 #Use scan method to match the input pattern against the pattern
-matches = input_string.scan(regrex_pattern)
+matches = input_string.scan(regex_pattern)
 
 #Output the matched string(s)
 puts matches.join

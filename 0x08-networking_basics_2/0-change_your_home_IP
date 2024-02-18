@@ -2,6 +2,7 @@
 
 # Configure the hosts file to :
 # - localhost resolves to 127.0.0.2
-echo "127.0.0.2 localhost" | sudo tee -a /etc/hosts > /dev/null
+echo "127.0.0.2		localhost" > ~/hosts.new
 # - facebook.com resolves to 8.8.8.8
-echo "8.8.8.8 facebook.com" | sudo tee -a /etc/hosts > /dev/nullecho "127.0.0.2 localhost" | sudo tee -a /etc/hosts > /dev/null
+echo "8.8.8.8		facebook.com" >> ~/hosts.new
+cp -f ~/hosts.new /etc/hosts

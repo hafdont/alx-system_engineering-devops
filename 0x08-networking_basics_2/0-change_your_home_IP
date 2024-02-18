@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
-# Configure the hosts file to :
-# - localhost resolves to 127.0.0.2
+# Configure the hosts:localhost to 127.0.0.2 and fb to to 8.8.8.8
+cp /etc/hosts ~/hosts.new
 echo "127.0.0.2		localhost" > ~/hosts.new
-# - facebook.com resolves to 8.8.8.8
 echo "8.8.8.8		facebook.com" >> ~/hosts.new
 cp -f ~/hosts.new /etc/hosts

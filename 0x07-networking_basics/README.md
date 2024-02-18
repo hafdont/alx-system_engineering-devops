@@ -70,3 +70,4 @@ Use the ping command to send ICMP echo requests to the specified IP address.
 Ping the IP address five times (-c 5 option).
 
 Display the ping statistics, including the number of packets transmitted and received, packet loss percentage, and round-trip time statistics (rtt min/avg/max/mdev).
+

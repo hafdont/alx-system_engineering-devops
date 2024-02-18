@@ -1,4 +1,6 @@
 0x06 Regular Expressions
+
+
 This project consists of a set of Ruby scripts that utilize regular expressions to match and extract specific patterns from text data. These scripts are designed to fulfill various requirements specified in the tasks provided.
 
 Table of Contents
@@ -64,5 +66,5 @@ Examples
 Refer to each script's respective task for usage examples and expected outputs.
 
 Contributors
-Developed by [Your Name]
+Developed by Hafiz Yusuf - hafizmasoud7@gmail.com
 Task designs provided by Sylvain Kalache and Guillaume Plessis

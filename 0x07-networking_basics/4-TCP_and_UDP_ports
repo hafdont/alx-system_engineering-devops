@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# This script displays listening ports along with their PID and program name
+
+# Use netstat to get the list of listening ports, filter out TCP and UDP protocols, and only show listening sockets
+# Then, use awk to print the local address and PID/Program name fields
+# Finally, use sed to remove excess spaces and format the output
+
+netstat -tuln | grep 'LISTEN' | awk '{print $4, $7}' | sed -E 's/:::([0-9]+)/0.0.0.0:\1/' | sed -E 's/::1:([0-9]+)/127.0.0.1:\1/' | sed -E 's/([0-9]+)\/(.+)/\1 \2/' | while read -r line; do
+    # Extract the port number and PID
+    port=$(echo "$line" | awk '{print $1}' | awk -F ':' '{print $NF}')
+    pid=$(echo "$line" | awk '{print $2}')
+    
+    # Get the program name using PID
+    program=$(ps -p "$pid" -o comm=)
+
+    # Print the port, PID, and program name
+    echo "Port: $port, PID: $pid, Program: $program"
+done

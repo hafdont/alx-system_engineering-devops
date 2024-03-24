@@ -1,4 +1,4 @@
-# Puppet manifest to install Flask from pip3
+#Puppet manifest to install Flask from pip3
 package { 'python3-pip':
   ensure => 'installed',
 }
